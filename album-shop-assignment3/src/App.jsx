@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import CatalogPage from "./pages/CatalogPage";
 import { ALBUMS } from "./data/albums";
+import AlbumDetailPage from "./pages/AlbumDetailPage";
 
 function App() {
   return (
@@ -12,6 +13,16 @@ function App() {
             path="/"
             element={
               <CatalogPage albums={ALBUMS} /*onAddToCart={handleAddToCart}*/ />
+            }
+          />
+
+          <Route
+            path="/album/:albumId"
+            element={
+              <AlbumDetailPage
+                albums={ALBUMS}
+                // onAddToCart={handleAddToCart}
+              />
             }
           />
         </Routes>
