@@ -1,4 +1,4 @@
-# 3A - AlbumShop
+# 3A - VinylVault
 
 ## 1. Project Setup & Execution Instructions
 
