@@ -30,7 +30,7 @@ git --version
 2. **Navigate to the project directory:**
 
    ```bash
-   cd REPOSITORY
+   cd album-shop-assignment3
    ```
 
 3. **Install project dependencies:**

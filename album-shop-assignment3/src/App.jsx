@@ -5,8 +5,10 @@ import { ALBUMS } from "./data/albums";
 import AlbumDetailPage from "./pages/AlbumDetailPage";
 import NavBar from "./components/NavBar";
 import CartDrawer from "./components/CartDrawer";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
+  // Universal states of the application
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -25,6 +27,7 @@ function App() {
     setIsCartOpen(true);
   };
 
+  // Update quantity of items in the cart
   const handleUpdateQuantity = (albumId, delta) => {
     setCart((prevCart) =>
       prevCart
@@ -76,6 +79,11 @@ function App() {
             element={
               <AlbumDetailPage albums={ALBUMS} onAddToCart={handleAddToCart} />
             }
+          />
+
+          <Route
+            path="/checkout"
+            element={<CheckoutPage cart={cart} onClearCart={handleClearCart} />}
           />
         </Routes>
       </main>

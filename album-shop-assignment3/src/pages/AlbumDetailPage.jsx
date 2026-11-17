@@ -7,6 +7,7 @@ function AlbumDetailPage({ albums, onAddToCart }) {
 
   const album = albums.find((a) => a.id === albumId);
 
+  // Check if any album products are missing
   if (!album) {
     return (
       <div className="detail-error">
@@ -17,6 +18,7 @@ function AlbumDetailPage({ albums, onAddToCart }) {
       </div>
     );
   }
+
   return (
     <div className="detail-container">
       <nav className="breadcrumb">
