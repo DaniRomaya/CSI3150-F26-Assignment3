@@ -574,18 +574,207 @@ body {
   gap: 1.5rem;
 }
 
-/* Responsive Layout */
+/* Tablet Responsiveness */
+@media (max-width: 900px) {
+  /* Album Catalog */
+  .album-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Album Details */
+  .detail-grid {
+    gap: 2rem;
+  }
+
+  /* Checkout */
+  .checkout-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Main Layout */
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 700px) {
+  /* Header and Navigation */
+  .site-header {
+    padding: 1rem;
+  }
+
+  .header-inner {
+    gap: 1rem;
+  }
+
+  .brand-logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-actions {
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .btn-cart-badge {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  /* Main Layout */
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Catalog */
+  .catalog-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .catalog-hero p {
+    font-size: 0.9rem;
+  }
+
+  .filter-bar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .filter-pill {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .album-image {
+    height: 240px;
+  }
+
+  /* Album Details */
+  .detail-container {
+    padding: 1.5rem 1rem;
+  }
+
   .detail-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .detail-img {
     max-width: 100%;
   }
 
+  .album-detail-title {
+    font-size: 1.6rem;
+  }
+
   .detail-actions {
     flex-wrap: wrap;
+  }
+
+  .detail-actions .btn {
+    min-width: 100%;
+  }
+
+  /* Cart Drawer */
+  .drawer-panel {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .cart-item {
+    gap: 0.75rem;
+  }
+
+  .cart-item-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Checkout */
+  .checkout-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .checkout-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .checkout-form,
+  .order-summary-card {
+    padding: 1.25rem;
+  }
+
+  /* Success and Empty Cart */
+  .checkout-success,
+  .empty-cart-page {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Small Mobile Screens */
+  @media (max-width: 400px) {
+    .site-header {
+      padding: 0.75rem;
+    }
+
+    .header-inner {
+      gap: 0.5rem;
+    }
+
+    .brand-logo {
+      font-size: 1rem;
+    }
+
+    .nav-actions {
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+    }
+
+    .btn-cart-badge {
+      padding: 0.35rem 0.55rem;
+      font-size: 0.75rem;
+    }
+
+    .catalog-hero h1 {
+      font-size: 1.5rem;
+    }
+
+    .filter-pill {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .detail-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .detail-actions .btn {
+      width: 100%;
+    }
+
+    .qty-input-group {
+      justify-content: space-between;
+    }
   }
 }
